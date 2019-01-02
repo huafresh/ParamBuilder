@@ -1,0 +1,1 @@
+include ':app', ':parambuilder-core', ':parambuilder-compile', ':parambuilder-annotation'
