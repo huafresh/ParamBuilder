@@ -8,5 +8,23 @@ dependencies {
     implementation project(':parambuilder-annotation')
 }
 
+def moduleName = "parambuilder-compile"
+def versionName = "1.0"
+
+
+task renameJar(type: Copy) {
+    from "build/libs"
+    into "build/libs"
+    include "${moduleName}.jar"
+    rename {
+        it.replace("${moduleName}", "${moduleName}-${versionName}")
+    }
+}
+
+assemble.doLast{
+    renameJar.execute()
+    delete("build/libs/${moduleName}.jar")
+}
+
 sourceCompatibility = "1.7"
 targetCompatibility = "1.7"
