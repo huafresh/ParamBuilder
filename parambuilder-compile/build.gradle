@@ -14,7 +14,7 @@ def versionName = "1.0"
 
 task renameJar(type: Copy) {
     from "build/libs"
-    into "build/libs"
+    into "build/output"
     include "${moduleName}.jar"
     rename {
         it.replace("${moduleName}", "${moduleName}-${versionName}")
@@ -23,7 +23,7 @@ task renameJar(type: Copy) {
 
 assemble.doLast{
     renameJar.execute()
-    delete("build/libs/${moduleName}.jar")
+    //delete("build/libs/${moduleName}.jar")
 }
 
 sourceCompatibility = "1.7"
