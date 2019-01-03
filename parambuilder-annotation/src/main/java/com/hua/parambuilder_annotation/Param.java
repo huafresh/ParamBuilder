@@ -13,7 +13,7 @@ import java.lang.annotation.Target;
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.CLASS)
 public @interface Param {
-    String setterMethodName() default "";
+    //String setterMethodName() default "";
 
-    String javaDoc() default "";
+    //String javaDoc() default "";
 }
