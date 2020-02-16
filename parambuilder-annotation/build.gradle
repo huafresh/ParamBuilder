@@ -18,7 +18,7 @@ task renameJar(type: Copy) {
 }
 
 assemble.doLast{
-    renameJar.execute()
+    // renameJar.execute()
     //delete("build/libs/${moduleName}.jar")
 }
 

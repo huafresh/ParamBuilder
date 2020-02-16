@@ -1,6 +1,7 @@
 package com.hua.paraminject;
 
-import android.support.v4.app.Fragment;
+
+import androidx.fragment.app.Fragment;
 
 import com.hua.parambuilder_annotation.Builder;
 import com.hua.parambuilder_annotation.Param;
